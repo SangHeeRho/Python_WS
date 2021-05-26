@@ -26,14 +26,19 @@
 
 print('*'*6,end='')
 print(" 홍익 대학교 과일 판매 머신 V01 ",end='')
-print('*'*6,end='')
+# print('%s.'% )
+print('*'*6,end='\n')
 fruitList=['orange','strawberry','peach','mango','grape','종료']
 PriceList=[1000,2500,1500,2000,2000]
 
 while True:
-	print("="*30)
-    n=int(input("구매 번호를 입력하세요(1~5)")):
+    print("="*30)
+    n=int(input("구매 번호를 입력하세요(1~5)"))
     print("<"*30)
-    if n in range(0,len(fruitList)-1):
-		print('%d". "'%(fruitList[n]),end=" ")
-		print('%s'%(fruitList[n]))
+    if n in range(1,len(fruitList)):
+		    print('%s %d원 입니다.'%(fruitList[n-1],PriceList[n-1]))
+    elif n ==6:
+        print('종료되었습니다.')
+        break
+    else:
+        print("번호를 확인해주세요.")
