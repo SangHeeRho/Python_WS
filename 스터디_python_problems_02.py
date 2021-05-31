@@ -17,7 +17,7 @@ def solution():
     elif 2<len(n)<=100:
         if len(n) % 2 ==1:
             print(n[int((len(n)+1)/2)])
-        else:
+        else:    # print_list
             print(n[int(len(n)/2)-1],end='')
             print(n[int((len(n)/2))])
     else:
